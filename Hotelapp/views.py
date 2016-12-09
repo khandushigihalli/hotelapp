@@ -104,7 +104,7 @@ def order(request):
         print neworder.id
         orders = Order.objects.all()
         return render(request, 'Hotelapp/orders.html', {'orders':orders,'ordercomplete':True})
-        #return HttpResponse('YOu called the post method with food id'+str(foodid))
+        
 
 
 def sendSimpleEmail(request):
