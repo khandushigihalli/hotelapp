@@ -1,0 +1,38 @@
+{% extends 'Hotelapp/base1.html' %}
+{% block container %}
+<!--sign-in form-->
+
+      <center><h1>Login for Hotel</h1></center>
+
+
+     {% if error %}
+          <h3 style="text-align:center;color:red;">{{error}}</h3>
+      {% endif %}
+ <form action="/Hotelapp/sign-in/" method="post" class="form-horizontal">
+{% csrf_token %}
+
+<center><h3>Usernamme<br><input type="text" name="username"></h3></center>
+ <center><h3>password<br><input type="text" name="password"></h3><br></center>
+
+<center><h3><input type="submit" value="sign-in"></h3>
+</center>
+
+ <p></p>
+ </form>
+ <ul>
+
+  </ul>
+
+
+	<center><a href="/Hotelapp/sign-up/">
+        <h1>create new user</h1></a> <br /></center>
+
+
+</div>
+</div>
+
+
+{% endblock container %}
+
+
+
